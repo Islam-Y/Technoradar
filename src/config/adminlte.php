@@ -312,23 +312,37 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
+            'text'        => 'Company',
+            'url'         => 'company',
             'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
+        ['header' => 'My menu'],
+
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'text' => 'Department',
+            'url'  => 'department'
         ],
+
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'text' => 'Employee',
+            'url'  => 'employee'
         ],
+
+        [
+            'text' => 'Position',
+            'url'  => 'position'
+        ],
+
+        [
+            'text' => 'Comments',
+            'url'  => 'comments'
+        ],
+
+        [
+            'text' => 'Technoradar',
+            'url'  => 'technoradar'
+        ],
+
         [
             'text'    => 'multilevel',
             'icon'    => 'fas fa-fw fa-share',

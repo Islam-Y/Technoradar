@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Add New Post</h2>
+                <h2>Add New Company</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('posts.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('company.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -22,14 +22,14 @@
         </div>
     @endif
 
-    <form action="{{ route('posts.store') }}" method="POST">
+    <form action="{{ route('company.store') }}" method="POST">
         @csrf
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Name:</strong>
-                    <input type="text" name="title" class="form-control" placeholder="Title">
+                    <input type="text" name="name" class="form-control" placeholder="Title">
                 </div>
             </div>
 

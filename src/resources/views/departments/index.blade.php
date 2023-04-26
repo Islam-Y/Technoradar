@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Laravel 8 CRUD Example from scratch </h2>
+
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('company.create') }}"> Create New Company</a>
+                <a class="btn btn-success" href="{{ route('department.create') }}"> Create New Department</a>
             </div>
         </div>
     </div>
@@ -20,17 +20,17 @@
 
     <table class="table table-bordered">
         <tr>
-            <th>Title</th>
-            <th>Description</th>
+            <th>Name</th>
+            <th>Company id</th>
         </tr>
-        @foreach ($companies as $company)
+        @foreach ($departments as $department)
             <tr>
-                <td>{{ $company->name }}</td>
-                <td>{{ $company->description }}</td>
+                <td>{{ $department->name }}</td>
+                <td>{{ $department->company_id }}</td>
                 <td>
-                    <a class="btn btn-info" href="{{ route('company.show',$company->id) }}">Show</a>
-                    <a class="btn btn-primary" href="{{ route('company.edit',$company->id) }}">Edit</a>
-                    <form action="{{ route('company.destroy',$company->id) }}" method="POST">
+                    <a class="btn btn-info" href="{{ route('department.show',$department->id) }}">Show</a>
+                    <a class="btn btn-primary" href="{{ route('department.edit',$department->id) }}">Edit</a>
+                    <form action="{{ route('department.destroy',$department->id) }}" method="POST">
 
                         @csrf
                         @method('DELETE')

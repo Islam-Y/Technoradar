@@ -10,5 +10,5 @@ class Company extends Model
     protected $table = 'company';
     use HasFactory;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'description'];
 }

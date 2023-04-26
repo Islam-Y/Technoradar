@@ -28,7 +28,7 @@ class CompanyController extends Controller
 
         Company::create($request->all());
 
-        return redirect()->route('companies.index')->with('success','Company created successfully.');
+        return redirect()->route('company.index')->with('success','Company created successfully.');
     }
 
     public function show(Company $company)
@@ -50,14 +50,14 @@ class CompanyController extends Controller
 
         $company->update($request->all());
 
-        return redirect()->route('companies.index')->with('success','Company updated successfully');
+        return redirect()->route('company.index')->with('success','Company updated successfully');
     }
 
     public function destroy(Company $company)
     {
         $company->delete();
 
-        return redirect()->route('companies.index')
+        return redirect()->route('company.index')
             ->with('success','Company deleted successfully');
     }
 }
