@@ -26,7 +26,7 @@
         @foreach ($departments as $department)
             <tr>
                 <td>{{ $department->name }}</td>
-                <td>{{ $department->company_id }}</td>
+                <td>{{ $department->company->name }}</td>
                 <td>
                     <a class="btn btn-info" href="{{ route('department.show',$department->id) }}">Show</a>
                     <a class="btn btn-primary" href="{{ route('department.edit',$department->id) }}">Edit</a>

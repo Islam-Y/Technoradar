@@ -21,7 +21,7 @@ class DepartmentController extends Controller
 
     public function create()
     {
-        $companies = Company::all();
+        $companies = Company::all()->pluck('name', 'id')->all();;
 
         return view('departments.create', compact('companies'));
     }
@@ -46,7 +46,12 @@ class DepartmentController extends Controller
 
     public function edit(Department $department)
     {
-        return view('departments.edit',compact('department'));
+        $companies = Company::all()->pluck('name', 'id')->all();
+
+        return view('departments.edit',[
+            'department' => $department,
+            'companies' => $companies
+        ]);
     }
 
     public function update(UpdateDepartmentRequest $request, Department $department)

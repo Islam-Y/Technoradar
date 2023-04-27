@@ -7,7 +7,7 @@
 
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('company.create') }}"> Create New Company</a>
+                <a class="btn btn-success" href="{{ route('position.create') }}"> Create New Position</a>
             </div>
         </div>
     </div>
@@ -20,17 +20,15 @@
 
     <table class="table table-bordered">
         <tr>
-            <th>Title</th>
-            <th>Description</th>
+            <th>Name</th>
         </tr>
-        @foreach ($companies as $company)
+        @foreach ($positions as $position)
             <tr>
-                <td>{{ $company->name }}</td>
-                <td>{{ $company->description }}</td>
+                <td>{{ $position->name }}</td>
                 <td>
-                    <a class="btn btn-info" href="{{ route('company.show',$company->id) }}">Show</a>
-                    <a class="btn btn-primary" href="{{ route('company.edit',$company->id) }}">Edit</a>
-                    <form action="{{ route('company.destroy',$company->id) }}" method="POST">
+                    <a class="btn btn-info" href="{{ route('position.show',$position->id) }}">Show</a>
+                    <a class="btn btn-primary" href="{{ route('position.edit',$position->id) }}">Edit</a>
+                    <form action="{{ route('position.destroy',$position->id) }}" method="POST">
 
                         @csrf
                         @method('DELETE')

@@ -36,13 +36,14 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Company id:</strong>
-                    <select class="form-control" name="company_id" id="company_id">
-                        <option value="" selected disabled> Select </option>
-                        @forelse ($companies as $company)
-                            <option value="{{ $company->id }}">{{ $company->name }} </option>
-                        @empty
-                        @endforelse
-                    </select>
+{{--                    <select class="form-control" name="company_id" id="company_id">--}}
+{{--                        <option value="" selected disabled> Select </option>--}}
+{{--                        @forelse ($companies as $company)--}}
+{{--                            <option value="{{ $company->id }}">{{ $company->name }} </option>--}}
+{{--                        @empty--}}
+{{--                        @endforelse--}}
+{{--                    </select>--}}
+                    {!! Form::select('company_id',  $companies, null, ['class' => 'form-control']) !!}
                 </div>
             </div>
 

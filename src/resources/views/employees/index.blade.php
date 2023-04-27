@@ -7,7 +7,7 @@
 
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('company.create') }}"> Create New Company</a>
+                <a class="btn btn-success" href="{{ route('employee.create') }}"> Create New Employee</a>
             </div>
         </div>
     </div>
@@ -20,17 +20,19 @@
 
     <table class="table table-bordered">
         <tr>
-            <th>Title</th>
-            <th>Description</th>
+            <th>Name</th>
+            <th>Position ID</th>
+            <th>Department ID</th>
         </tr>
-        @foreach ($companies as $company)
+        @foreach ($employees as $employee)
             <tr>
-                <td>{{ $company->name }}</td>
-                <td>{{ $company->description }}</td>
+                <td>{{ $employee->name }}</td>
+                <td>{{ $employee->position->name }}</td>
+                <td>{{ $employee->department->name }}</td>
                 <td>
-                    <a class="btn btn-info" href="{{ route('company.show',$company->id) }}">Show</a>
-                    <a class="btn btn-primary" href="{{ route('company.edit',$company->id) }}">Edit</a>
-                    <form action="{{ route('company.destroy',$company->id) }}" method="POST">
+                    <a class="btn btn-info" href="{{ route('employee.show',$employee->id) }}">Show</a>
+                    <a class="btn btn-primary" href="{{ route('employee.edit',$employee->id) }}">Edit</a>
+                    <form action="{{ route('employee.destroy',$employee->id) }}" method="POST">
 
                         @csrf
                         @method('DELETE')

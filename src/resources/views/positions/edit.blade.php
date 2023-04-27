@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Edit Department</h2>
+                <h2>Edit Position</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('department.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('position.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -22,7 +22,7 @@
         </div>
     @endif
 
-    <form action="{{ route('department.update',$department->id) }}" method="POST">
+    <form action="{{ route('position.update',$position->id) }}" method="POST">
         @csrf
 
         @method('PUT')
@@ -30,14 +30,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Title:</strong>
-                    <input type="text" name="name" value="{{ $department->name }}" class="form-control" placeholder="Title">
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Company id:</strong>
-                    {!! Form::select('company_id',  $companies, null, ['class' => 'form-control']) !!}
+                    <input type="text" name="name" value="{{ $position->name }}" class="form-control" placeholder="Title">
                 </div>
             </div>
 
