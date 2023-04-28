@@ -21,7 +21,7 @@
     <table class="table table-bordered">
         <tr>
             <th>Name</th>
-            <th>Company id</th>
+            <th>Company</th>
         </tr>
         @foreach ($departments as $department)
             <tr>

@@ -45,7 +45,14 @@ class EmployeeController extends Controller
 
     public function show(Employee $employee)
     {
-        return view('employees.show',compact('employee'));
+        $departments = Department::all()->pluck('name', 'id')->all();
+        $positions = Position::all()->pluck('name', 'id')->all();
+
+        return view('employees.show',[
+            'employee' => $employee,
+            'departments' => $departments,
+            'positions' => $positions
+        ]);
     }
 
     public function edit(Employee $employee)

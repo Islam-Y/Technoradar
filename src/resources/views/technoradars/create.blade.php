@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Edit Employee</h2>
+                <h2>Add New Technoradar Item</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('employee.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('technoradar.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -22,30 +22,38 @@
         </div>
     @endif
 
-    <form action="{{ route('employee.update',$employee->id) }}" method="POST">
+    <form action="{{ route('technoradar.store') }}" method="POST">
         @csrf
 
-        @method('PUT')
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Full name:</strong>
-                    <input type="text" name="name" value="{{ $employee->name }}" class="form-control" placeholder="Title">
+                    <strong>Name:</strong>
+                    <input type="text" name="name" class="form-control" placeholder="Title">
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Position:</strong>
-                    {!! Form::select('position_id',  $positions, null, ['class' => 'form-control']) !!}
+                    <strong>Category:</strong>
+                    {!! Form::select('category',  $categories, null, ['class' => 'form-control']) !!}
 
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Department:</strong>
-                    {!! Form::select('department_id',  $departments, null, ['class' => 'form-control']) !!}
+                    <strong>User type:</strong>
+                    {!! Form::select('user_type',  $user_types, null, ['class' => 'form-control']) !!}
+
+
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Description:</strong>
+                    <textarea class="form-control" style="height:150px" name="description" placeholder="Description"></textarea>
 
                 </div>
             </div>

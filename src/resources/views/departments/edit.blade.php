@@ -36,7 +36,7 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Company id:</strong>
+                    <strong>Company:</strong>
                     {!! Form::select('company_id',  $companies, null, ['class' => 'form-control']) !!}
                 </div>
             </div>

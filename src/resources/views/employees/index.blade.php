@@ -20,9 +20,9 @@
 
     <table class="table table-bordered">
         <tr>
-            <th>Name</th>
-            <th>Position ID</th>
-            <th>Department ID</th>
+            <th>Full name</th>
+            <th>Position</th>
+            <th>Department</th>
         </tr>
         @foreach ($employees as $employee)
             <tr>

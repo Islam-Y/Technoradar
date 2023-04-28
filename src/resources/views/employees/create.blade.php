@@ -28,15 +28,22 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Name:</strong>
+                    <strong>Full name:</strong>
                     <input type="text" name="name" class="form-control" placeholder="Title">
                 </div>
             </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-
+                    <strong>Position:</strong>
                     {!! Form::select('position_id',  $positions, null, ['class' => 'form-control']) !!}
+
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Department:</strong>
                     {!! Form::select('department_id',  $departments, null, ['class' => 'form-control']) !!}
 
                 </div>

@@ -41,7 +41,11 @@ class DepartmentController extends Controller
 
     public function show(Department $department)
     {
-        return view('departments.show',compact('department'));
+        $companies = Company::all()->pluck('name', 'id')->all();
+        return view('departments.show',[
+            'department' => $department,
+            'companies' => $companies
+        ]);
     }
 
     public function edit(Department $department)
